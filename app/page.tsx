@@ -1,11 +1,14 @@
 import type { Data } from "./types";
-import { differenceInDays, differenceInHours, differenceInMinutes, format } from "date-fns";
+import {
+  differenceInDays,
+  differenceInHours,
+  differenceInMinutes,
+} from "date-fns";
 
 import DataList from "./DataList";
 
-const dataUrl = 'https://opendata.bordeaux-metropole.fr/api/explore/v2.1/catalog/datasets/previsions_pont_chaban/records?where=date_passage%20%3E%20now()&limit=20';
-
 const Home = async () => {
+  const dataUrl = 'https://opendata.bordeaux-metropole.fr/api/explore/v2.1/catalog/datasets/previsions_pont_chaban/records?where=date_passage%20%3E%20now()&limit=20';
   const data = await fetch(dataUrl).then(res => res.json()) as Data;
 
   const nextClosingDate = new Date(data.results[0].date_passage);
