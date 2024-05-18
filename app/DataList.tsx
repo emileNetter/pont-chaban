@@ -7,7 +7,6 @@ import type { Data } from "./types";
 import { createCalendarEvent } from "./helpers";
 
 const DataList = ({ data }: { data: Data }) => {
-  console.log('DataList', data);
   return (
     <div className="flex flex-col gap-4">
       { data.results.map((result, index) => (
