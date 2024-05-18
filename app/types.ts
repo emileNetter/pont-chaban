@@ -1,5 +1,5 @@
 export declare interface Result {
-  bateaux: string,
+  bateau: string,
   date_passage: string,
   fermeture_a_la_circulation: string,
   re_ouverture_a_la_circulation: string,
