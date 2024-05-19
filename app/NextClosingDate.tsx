@@ -1,3 +1,5 @@
+'use client';
+
 import type { Data } from "./types";
 import {
   differenceInDays,
